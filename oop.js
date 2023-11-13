@@ -1,13 +1,18 @@
 class User {
   static count = 0;
+  #bankAccount;
   constructor(id, name, salary) {
     this.i = id;
     this.n = name || "Unknown";
     this.s = salary < 5000 ? salary + 500 : salary;
+    this.#bankAccount = 123456;
     User.count++;
   }
   sayHi () {
     return `Hello, ${this.n}`
+  }
+  printBankAccount () {
+    return this.#bankAccount;
   }
 }
 
@@ -34,4 +39,4 @@ const adminMain = new Admin(5,'Ahmad', 4000, 'Access to all files');
 
 // console.log(User.count);
 
-console.log(adminMain.sayHi());
+console.log(user1.printBankAccount());
