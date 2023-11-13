@@ -1,7 +1,10 @@
-function User(id, name, salary) {
-  this.i = id;
-  this.n = name;
-  this.s = salary;
+
+class User {
+    constructor(id, name, salary) {
+        this.i = id;
+        this.n = name;
+        this.s = salary;
+    }
 }
 
 
