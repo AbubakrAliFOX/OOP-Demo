@@ -4,12 +4,16 @@ class User {
     this.i = id;
     this.n = name || "Unknown";
     this.s = salary < 5000 ? salary + 500 : salary;
+    User.count++;
   }
   summary() {
     return `Hello, ${this.n}. You salalry is ${this.s} - ID: ${this.i}`;
   }
   editName(newName) {
     this.n = newName;
+  }
+  static sayHi() {
+    return `Hi`;
   }
 }
 
@@ -24,3 +28,4 @@ const user4 = new User(4, "", 2000);
 // console.log(user4.n);
 
 console.log(User.count);
+console.log(User.sayHi());
