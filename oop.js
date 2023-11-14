@@ -17,10 +17,11 @@ class User {
 }
 
 class Admin extends User {
-    constructor(id, name, salary, permissions) {
-        super(id, name, salary);
+    constructor(id, name, salary, bankAccount , permissions) {
+        super(id, name, salary, bankAccount);
         this.p = permissions;
     }
+
 }
 
 const user1 = new User(1, "John", 2000);
@@ -40,3 +41,6 @@ const adminMain = new Admin(5,'Ahmad', 4000, 'Access to all files');
 // console.log(User.count);
 
 console.log(user1.printBankAccount());
+console.log(adminMain.printBankAccount());
+
+console.log(Admin.prototype.sayHi);
